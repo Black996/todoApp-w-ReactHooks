@@ -8,7 +8,7 @@ import { DispatchContext } from './context/todos.context';
 function Todo({ task, completed, id }) {
     const dispatch = useContext(DispatchContext);
     const [isEditing, toggleIsEditing] = useToggleState(false);
-    console.log(`TODO RE-RENDER: ${id}`);
+
     return (
         <ListItem>
 
