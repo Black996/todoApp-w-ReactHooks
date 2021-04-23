@@ -3,10 +3,10 @@ import useToggleState from "./hooks/useToggleState";
 import { Checkbox, ListItem, ListItemText, IconButton, ListItemSecondaryAction } from "@material-ui/core";
 import { Delete, Edit } from "@material-ui/icons";
 import EditTodoForm from './EditTodoForm';
-import { TodosContext } from './context/todos.context';
+import { DispatchContext } from './context/todos.context';
 
 function Todo({ task, completed, id }) {
-    const { dispatch } = useContext(TodosContext);
+    const dispatch = useContext(DispatchContext);
     const [isEditing, toggleIsEditing] = useToggleState(false);
 
     return (
